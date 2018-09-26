@@ -1,0 +1,358 @@
+/*----------------
+     BODY
+----------------*/
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexhei.css);
+@import 'https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway';
+
+body{
+  font-family: 'Raleway', 'cwTeXHei', sans-serif;
+  outline: 0;
+  background: #2e2e2e;
+}
+h1,h2,h3,h4{
+  color: #bcc3d1;  
+}
+p,
+span,
+label{
+  color: #bfbfbf;
+}
+span.glyphicon,
+span.icon{
+  color: inherit;
+}
+a{
+  color: #fff;
+}
+a:hover{
+  color: #fff;
+  text-decoration: none;
+}
+hr{
+  border: 1px solid #212121;
+  box-shadow: 0 1px 0 0 #484848;
+}
+.inner{
+  padding-top: 80px;
+  padding-bottom: 30px;
+  min-height: 950px;
+}
+.img{  
+  border: 3px solid #bcc3d1;
+  padding: 7px;
+}
+.thumbnails{
+  padding-left: 0;
+  list-style: none;
+}
+
+.thumbnails li{
+  margin: 10px 0;
+}
+
+.thumbnails li p{
+  margin: 7px 0 3px;
+  color: #FFF;
+}
+.thumbnail {
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background: #2b6ca3;
+  border: 1px solid #bcc3d1;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+       -o-transition: border .2s ease-in-out;
+          transition: border .2s ease-in-out;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  background: #377fbc;
+  border-color: #337ab7;
+}
+.thumbnail img{
+  width: 100px;
+}
+#toTop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  border-radius: 33px;
+  padding: 10px 14px 8px 16px;
+  background: #207ea9;
+  font-size: 24px;
+  color: #fff;
+}
+button:focus{
+  outline: 0;
+}
+/*----------------
+     HEADER
+----------------*/
+header{
+  background: #207ea9;
+  border-top: 15px solid #2e2e2e;
+  border-bottom: 15px solid #2e2e2e;
+}
+.navbar{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#site-title{
+  line-height: 50px;
+  padding: 0;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+  line-height: 50px;
+  padding: 0 50px;
+  border-radius: 0;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav li a:hover,
+.navbar-nav li a:focus{
+  background: #2b6ca3;
+}
+.navbar-toggler{
+  border: 2px solid #FFF;
+  background: #48acd9;
+  color: #fff;
+}
+header .nav-link{
+  font-size: 1rem;
+}
+/*----------------
+     FOOTER
+----------------*/
+footer{
+  background: #141414;
+  text-align: center;
+  width: 100%;
+  min-height: 40px;
+  line-height: 40px;
+  color: gray;
+}
+
+/*----------------
+     Home
+----------------*/
+#myCarousel p,
+#myCarousel h1{
+  color: #fff;
+}
+
+#myCarousel .banner{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 3.5rem;
+}
+@media (max-width: 991px) {
+  #myCarousel .banner{
+    font-size: 2rem;
+  }
+}
+@media (max-width: 575px) {
+  #myCarousel .banner{
+    display: none;
+  }
+  #myCarousel .lead{
+    font-size: 1rem;
+  }
+}
+#myCarousel .carousel-caption{
+  text-align: right;
+  padding: 0;
+  text-shadow: 0 1px 1px rgba(0,0,0,.6);
+}
+#myCarousel .glyphicon {
+  font-size: 1.5rem;
+}
+
+.history,
+.news{
+  margin-top: 20px;
+}
+.history-inner{
+  height: 200px;
+  padding: 5px 0;
+}
+.home-tmb li a{
+  text-align: center;
+}
+@media (min-width: 992px){
+  .news{
+    padding-left: 40px;
+  }
+  .home-tmb{
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .history h4,
+  .news h4,
+  .home-tmb li{
+    text-align: center;
+  }  
+  .history-inner{
+    padding: 10px 5% 5px 10%;
+  }
+}
+/*----------------
+     About
+----------------*/
+.about-content span{
+  font-weight: bold;
+  color: #a6bace;
+}
+.about-title{
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+@media (min-width: 576px){
+  .about-title{
+    font-size: 28px;
+  }
+}
+
+/*----------------
+     Profile
+----------------*/
+.fade{
+  transition-duration:  .4s;
+  transition-timing-function: ease;
+  -webkit-transition-duration:  .4s;
+  -webkit-transition-timing-function: ease;
+  -o-transition-duration:  .4s;
+  -o-transition-timing-function: ease;
+}
+#profile{
+  text-align: center;
+}
+.pf-block>h4{
+  padding-top: 10px;
+  margin: 20px auto 10px;
+  border-top: 2px groove #414141;
+}
+.pf-nav{
+  margin: 0 auto 20px;
+}
+
+@media (min-width: 992px){
+  .pf-nav{
+    padding: 0 140px;
+  }
+}
+.pf-nav .nav-item a.nav-link:hover,
+.pf-nav .nav-item a.nav-link:focus,
+.pf-nav .nav-item a.nav-link.active{
+  background: #2b6ca3;
+  color: #FFF;
+}
+.pf-nav li{
+  padding: 0 2px;;
+}
+.pf-nav .nav-link{
+  padding: .5rem 0;
+}
+#profile .img.tab-pane{
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+}
+.pf-content{
+  margin-bottom: 70px;
+}
+.pf-in{
+  padding-top: 10px;
+  align-items:flex-start;
+  align-content:flex-start;
+}
+@media (max-width: 767px) {
+  .pf-nav{
+    border: 0;
+  }
+  .pf-nav .nav-link{
+    border-radius: 4px;
+    border: 1px solid #207ea9;
+    margin-bottom: 4px;
+  }
+  .pf-in{
+    margin: 0;
+    padding: 10px 0;
+  }
+  .pf-in .in-b{
+    color: #e5e5e5;
+  }
+}
+@media (min-width: 992px) {
+  .pf-content{
+    padding: 0 30px;
+  }
+}
+@media (min-width: 768px) {
+  .pf-nav .nav-item a.nav-link.active{
+    border-bottom-color: transparent;
+  }
+  .pf-in .in-f{
+    text-align: right;
+    padding: 0;
+  }
+  .pf-in .in-b{
+    text-align: left;
+    padding-left: 0;
+  }
+  .pf-in .in-f:after{
+    content: '：';
+  }
+}
+/*----------------
+     Gallery
+----------------*/
+#gallery{
+  text-align: center;
+}
+#gallery>p{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/*----------------
+     Gallery inner
+----------------*/
+.gallery-inner{
+  text-align: center;
+}
+#gr-top{
+  margin-bottom: 20px;
+}
+.gallery-inner img{
+  display: block;
+  margin: 90px auto 10px;
+}
+.gallery-inner img:first-of-type {
+  margin-top: 50px;
+}
+.gallery-inner .imgs,
+.gallery-inner>:nth-last-child(2){
+  margin-bottom: 50px;
+}
+@media (max-width: 767px){
+  .gallery-inner img{
+    width: 100%;
+  }
+}
+.gr-btn{
+  padding-top: 30px;
+  line-height: 30px;
+}
+.gr-btn a{
+  padding: 0;
+}
