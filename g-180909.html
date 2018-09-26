@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foresta Di Memoria - Gallery</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/im-style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-48434727-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+    
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="fixed-top"></header>
+    <!-- end -->
+    
+    <!-- Content -->
+    <div class="gallery-inner inner container">
+      <h2 id="gr-top">2018/09/09</h2>
+      <p>期待的新衣(｀・ω・´)<br>前一天幫2人去黃化磨到手斷掉(炸)</p>
+      <div class="imgs"></div>
+      
+      <script>
+        $(document).ready(function(){
+          var gnum = 'g50'; //編號
+          var num = '';
+          for (var i = 1; i<16; i++){ //i=照片數量+1
+            if (i<10){
+              num = gnum + '0'+i;
+            }else{
+              num = gnum + i;
+            }
+            $('.imgs').append('<img class="img img'+i+'" src="images/gallery/' + num +'.jpg">');
+          }
+          //$('.img5').after('<p>test2</p>');  //插入照片下文字
+        });
+      </script>
+      
+      <div class="gr-btn row">
+        <a class="col-4" href="/g-180217.html">&lt;&lt; previous</a>
+        <a class="col-4" href="/gallery.html">back to Gallery</a>
+        <a class="col-4" id="next" href="/g-180915.html">next &gt;&gt;</a>
+      </div>
+    </div>
+    <!-- end -->
+<script>
+  $(function(){
+    $('.nav-link.gallery').addClass('active');
+  });
+</script>
+    <!-- Footer -->
+    <footer></footer>
+    <!-- end -->
+   
+  </body>
+</html>
