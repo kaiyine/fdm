@@ -6,8 +6,21 @@
 
 body{
   font-family: 'Raleway', 'cwTeXHei', sans-serif;
-  outline: 0;
   background: #2e2e2e;
+  font-size: 11pt;
+  position: relative;
+  overflow-y: scroll;
+  height: 100vh;
+}
+*,*:hover,*:focus{
+  outline: 0 !important;
+}
+a{
+  color: #fff;
+}
+a:hover{
+  color: #fff;
+  text-decoration: none;
 }
 h1,h2,h3,h4{
   color: #bcc3d1;  
@@ -17,100 +30,58 @@ span,
 label{
   color: #bfbfbf;
 }
-span.glyphicon,
-span.icon{
-  color: inherit;
+span{
+  font-size: 11pt;
 }
-a{
-  color: #fff;
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-a:hover{
-  color: #fff;
-  text-decoration: none;
+.content{
+  padding-top: 60px;
 }
-hr{
-  border: 1px solid #212121;
-  box-shadow: 0 1px 0 0 #484848;
-}
-.inner{
-  padding-top: 80px;
-  padding-bottom: 30px;
-  min-height: 950px;
+.title{
+  border-bottom: 1px solid #bcc3d1;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 .img{  
   border: 3px solid #bcc3d1;
   padding: 7px;
 }
-.thumbnails{
-  padding-left: 0;
-  list-style: none;
-}
-
-.thumbnails li{
-  margin: 10px 0;
-}
-
-.thumbnails li p{
-  margin: 7px 0 3px;
-  color: #FFF;
-}
-.thumbnail {
-  display: inline-block;
-  padding: 4px;
-  margin-bottom: 20px;
-  line-height: 1.42857143;
-  background: #2b6ca3;
-  border: 1px solid #bcc3d1;
-  border-radius: 4px;
-  -webkit-transition: border .2s ease-in-out;
-       -o-transition: border .2s ease-in-out;
-          transition: border .2s ease-in-out;
-}
-
-a.thumbnail:hover,
-a.thumbnail:focus,
-a.thumbnail.active {
-  background: #377fbc;
-  border-color: #337ab7;
-}
-.thumbnail img{
-  width: 100px;
-}
 #toTop {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 15px;
+  right: 15px;
   cursor: pointer;
   display: none;
   z-index: 999;
-  border-radius: 33px;
-  padding: 10px 14px 8px 16px;
+  border-radius: 50px;
+  padding: 6px 14px;
   background: #207ea9;
   font-size: 24px;
   color: #fff;
-}
-button:focus{
-  outline: 0;
 }
 /*----------------
      HEADER
 ----------------*/
 header{
   background: #207ea9;
-  border-top: 15px solid #2e2e2e;
-  border-bottom: 15px solid #2e2e2e;
+  border-top: 10px solid #2e2e2e;
+  border-bottom: 10px solid #2e2e2e;
 }
 .navbar{
   padding-top: 0;
   padding-bottom: 0;
 }
 #site-title{
-  line-height: 50px;
+  line-height: 40px;
   padding: 0;
 }
-.navbar-expand-lg .navbar-nav .nav-link{
-  line-height: 50px;
-  padding: 0 50px;
+#nav-bar .navbar-nav .nav-link{
+  line-height: 40px;
+  padding: 0 30px;
   border-radius: 0;
 }
 .navbar-nav .nav-link.active,
@@ -119,12 +90,8 @@ header{
   background: #2b6ca3;
 }
 .navbar-toggler{
-  border: 2px solid #FFF;
   background: #48acd9;
   color: #fff;
-}
-header .nav-link{
-  font-size: 1rem;
 }
 /*----------------
      FOOTER
@@ -137,108 +104,82 @@ footer{
   line-height: 40px;
   color: gray;
 }
-
 /*----------------
-     Home
+     ALBUM
 ----------------*/
-#myCarousel p,
-#myCarousel h1{
+.album-link li{
+  min-width: auto;
+}
+.album-link li a {
+  display: block;
+  margin-bottom: 20px;
+}
+.album-link li a img{
+  transition: all .2s;
+}
+.album-link li a:hover img,
+.album-link li a:focus img,
+.album-link li a.active img {
+  transform: scale(1.1,1.1)
+}
+.album-link li a p{
+  display: inline-block;
+  width: 100px;
+  margin-bottom: 0;
+  padding: 3px 0;
+  color: #FFF;
+}
+.album-link li a img{
+  width: 100px;
+}
+/*----------------
+     Show Photo
+----------------*/
+#show-photo{
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.photo-close{
+  position: absolute;
+  z-index: 99;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  padding: 8px 14px;
   color: #fff;
 }
-
-#myCarousel .banner{
-  font-family: 'Fredericka the Great', cursive;
-  font-size: 3.5rem;
+.album-title{
+  background: #244351;
 }
-@media (max-width: 991px) {
-  #myCarousel .banner{
-    font-size: 2rem;
-  }
+#show-photo .swiper-container,
+#show-photo .swiper-wrapper,
+#show-photo .swiper-slide{
+  align-items: center;
 }
-@media (max-width: 575px) {
-  #myCarousel .banner{
-    display: none;
-  }
-  #myCarousel .lead{
-    font-size: 1rem;
-  }
+#show-photo .swiper-wrapper{
+  padding-top: 10px;
+  padding-bottom: 40px;
 }
-#myCarousel .carousel-caption{
-  text-align: right;
-  padding: 0;
-  text-shadow: 0 1px 1px rgba(0,0,0,.6);
+#show-photo img{
+  max-width: 100%;
+  max-height: 100%;
 }
-#myCarousel .glyphicon {
-  font-size: 1.5rem;
-}
-
-.history,
-.news{
-  margin-top: 20px;
-}
-.history-inner{
-  height: 200px;
+#show-photo .swiper-wrapper p{
   padding: 5px 0;
 }
-.home-tmb li a{
-  text-align: center;
-}
-@media (min-width: 992px){
-  .news{
-    padding-left: 40px;
-  }
-  .home-tmb{
-    padding-top: 20px;
-  }
-}
-
-@media (max-width: 575px) {
-  .history h4,
-  .news h4,
-  .home-tmb li{
-    text-align: center;
-  }  
-  .history-inner{
-    padding: 10px 5% 5px 10%;
-  }
-}
-/*----------------
-     About
-----------------*/
-.about-content span{
-  font-weight: bold;
-  color: #a6bace;
-}
-.about-title{
-  margin-top: 0;
-  font-size: 24px;
-  font-weight: normal;
-}
-
-@media (min-width: 576px){
-  .about-title{
-    font-size: 28px;
-  }
-}
-
 /*----------------
      Profile
 ----------------*/
-.fade{
-  transition-duration:  .4s;
-  transition-timing-function: ease;
-  -webkit-transition-duration:  .4s;
-  -webkit-transition-timing-function: ease;
-  -o-transition-duration:  .4s;
-  -o-transition-timing-function: ease;
-}
 #profile{
   text-align: center;
 }
 .pf-block>h4{
-  padding-top: 10px;
-  margin: 20px auto 10px;
-  border-top: 2px groove #414141;
+  margin: 20px auto 20px;
+  display: inline-block;
+  padding: 0 10px 10px;
+  border-bottom: 2px groove #414141;
 }
 .pf-nav{
   margin: 0 auto 20px;
@@ -313,46 +254,21 @@ footer{
   }
 }
 /*----------------
-     Gallery
+     About
 ----------------*/
-#gallery{
-  text-align: center;
-}
-#gallery>p{
-  margin-top: 20px;
-  margin-bottom: 30px;
+.about-content span{
   font-weight: bold;
+  color: #a6bace;
+}
+.about-title{
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: normal;
 }
 
-/*----------------
-     Gallery inner
-----------------*/
-.gallery-inner{
-  text-align: center;
-}
-#gr-top{
-  margin-bottom: 20px;
-}
-.gallery-inner img{
-  display: block;
-  margin: 90px auto 10px;
-}
-.gallery-inner img:first-of-type {
-  margin-top: 50px;
-}
-.gallery-inner .imgs,
-.gallery-inner>:nth-last-child(2){
-  margin-bottom: 50px;
-}
-@media (max-width: 767px){
-  .gallery-inner img{
-    width: 100%;
+@media (min-width: 576px){
+  .about-title{
+    font-size: 28px;
   }
-}
-.gr-btn{
-  padding-top: 30px;
-  line-height: 30px;
-}
-.gr-btn a{
-  padding: 0;
 }
