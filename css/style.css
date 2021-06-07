@@ -120,7 +120,9 @@ footer{
 .album-link li a:hover img,
 .album-link li a:focus img,
 .album-link li a.active img {
-  transform: scale(1.1,1.1)
+  transform: scale(1.1,1.1);
+/*   opacity: .3; */
+  filter: brightness(30%);
 }
 .album-link li a p{
   display: inline-block;
@@ -131,6 +133,20 @@ footer{
 }
 .album-link li a img{
   width: 100px;
+}
+.album-link li a span{
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  transition: all .2s;
+  opacity: 0;
+}
+.album-link li a:hover span,
+.album-link li a:focus span,
+.album-link li a.active span{
+  opacity: 1;
 }
 /*----------------
      Show Photo
